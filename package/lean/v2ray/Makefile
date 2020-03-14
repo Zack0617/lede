@@ -61,7 +61,7 @@ GO_PKG:=v2ray.com/core
 GO_PKG_LDFLAGS:=-s -w
 GO_PKG_LDFLAGS_X:= \
 	v2ray.com/core.version=$(PKG_VERSION) \
-	v2ray.com/core.build=Lean \
+	v2ray.com/core.build=Zack \
 	v2ray.com/core.codename=OpenWrt
 
 include $(INCLUDE_DIR)/package.mk
