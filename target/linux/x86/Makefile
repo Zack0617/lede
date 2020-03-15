@@ -20,7 +20,7 @@ KERNELNAME:=bzImage
 include $(INCLUDE_DIR)/target.mk
 
 DEFAULT_PACKAGES += partx-utils mkf2fs fdisk e2fsprogs htop lm-sensors autocore luci-proto-bonding ca-certificates\
-kmod-e1000e kmod-igb kmod-igbvf kmod-ixgbe kmod-vmxnet3 kmod-i40e kmod-i40evf kmod-fs-f2fs
+kmod-e1000e kmod-igb kmod-igbvf kmod-ixgbe kmod-ixgbevf kmod-vmxnet3 kmod-i40e kmod-i40evf kmod-fs-f2fs
 
 $(eval $(call BuildTarget))
 
