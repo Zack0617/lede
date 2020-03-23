@@ -21,7 +21,7 @@ config global
 
 
 config socks5_proxy
-	option socks '1'
+	option socks '0'
 	option local_port '1080'
 	option local_address '0.0.0.0'
 
