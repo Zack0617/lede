@@ -111,3 +111,5 @@ else
 	log('更新失败！')
 end
 --]]
+
+luci.sys.call("/etc/init.d/dnsmasq reload")

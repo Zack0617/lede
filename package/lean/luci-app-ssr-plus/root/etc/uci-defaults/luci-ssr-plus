@@ -15,5 +15,6 @@ EOF
 
 killall -q -9 ssr-monitor ss-redir ssr-redir ss-local ssr-local obfs-local v2ray-plugin v2ray trojan ipt2socks ssr-server kcptun-client dns2socks microsocks redsocks2
 /usr/share/shadowsocksr/gfw2ipset.sh
+rm -rf /tmp/luci-modulecache/*
 rm -f /tmp/luci-indexcache
 exit 0
