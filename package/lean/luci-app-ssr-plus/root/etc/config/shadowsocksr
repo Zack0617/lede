@@ -24,10 +24,6 @@ config socks5_proxy
 	option socks '1'
 	option local_port '1080'
 	option local_address '0.0.0.0'
-	option auth_enable '1'
-	option username 'zack0617'
-	option password '20061483'
-	option wan_enable '1'
 
 config access_control
 	option wan_bp_list '/etc/china_ssr.txt'
