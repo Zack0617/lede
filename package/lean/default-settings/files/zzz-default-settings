@@ -16,7 +16,7 @@ uci set network.lan.type='bridge'
 uci set network.lan.ifname='eth0' 
 uci set network.lan.netmask='255.255.255.0'
 uci set network.lan.gateway='192.168.10.1'
-uci set network.lan.dns='61.139.2.69 218.6.200.139'
+uci set network.lan.dns='114.114.114.114 223.5.5.5'
 uci set network.lan.ifname='eth0 tap_vpn'
 uci set network.lan.delegate='0'
 uci commit network
