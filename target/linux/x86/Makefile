@@ -9,11 +9,11 @@ include $(TOPDIR)/rules.mk
 ARCH:=i386
 BOARD:=x86
 BOARDNAME:=x86
-FEATURES:=squashfs vdi vmdk pcmcia fpu
-SUBTARGETS:=64 generic zen legacy geode
-MAINTAINER:=Felix Fietkau <nbd@nbd.name>
+FEATURES:=squashfs vdi vmdk pcmcia fpu boot-part rootfs-part
+SUBTARGETS:=64 generic legacy geode
 
-KERNEL_PATCHVER:=4.19
+KERNEL_PATCHVER:=5.4
+KERNEL_TESTING_PATCHVER:=5.4
 
 KERNELNAME:=bzImage
 
@@ -24,6 +24,9 @@ kmod-e1000e kmod-igb kmod-igbvf kmod-ixgbe kmod-ixgbevf kmod-vmxnet3 kmod-i40e k
 
 $(eval $(call BuildTarget))
 
-$(eval $(call $(if $(CONFIG_TARGET_ROOTFS_ISO),RequireCommand,Ignore),mkisofs, \
-   	Please install mkisofs. \
+$(eval $(call $(if $(CONFIG_ISO_IMAGES),SetupHostCommand,Ignore),mkisofs, \
+	Please install mkisofs. , \
+	mkisofs -v 2>&1 , \
+	genisoimage -v 2>&1 | grep genisoimage, \
+	xorrisofs -v 2>&1 | grep xorriso \
 ))
